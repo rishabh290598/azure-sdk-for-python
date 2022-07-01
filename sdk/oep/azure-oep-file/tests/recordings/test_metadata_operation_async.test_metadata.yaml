@@ -1,0 +1,81 @@
+interactions:
+- request:
+    body: '{"acl": {"owners": ["data.default.viewers@dpId.contoso.com"],
+      "viewers": ["data.default.viewers@dpId.contoso.com"]}, "data":
+      {"DatasetProperties": {"FileSourceInfo": {"FileSource": "/osdu-user/1656619195836-2022-06-30-19-59-55-836/9202cae7488f4d55b7c0a24a259d3096"}},
+      "Endian": "BIG"}, "kind": "osdu:wks:dataset--File.Generic:1.0.0", "legal": {"legaltags":
+      ["dpId-R3FullManifest-Legal-Tag-Test8646767"], "otherRelevantDataCountries":
+      ["US"], "status": "compliant"}}'
+    headers:
+      Accept:
+      - application/json
+      Content-Length:
+      - '516'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - azsdk-python-oep-file/1.0.0b1 Python/3.10.5 (Windows-10-10.0.22000-SP0)
+      data-partition-id:
+      - dpId
+      frame-of-reference:
+      - afabh
+    method: POST
+    uri: https://fake-instance.oep.ppe.azure-int.net/api/file/v2/files/metadata
+  response:
+    body:
+      string: '{"id":"dpId:dataset--File.Generic:269dc6ed-b9de-4a54-a59d-be56e6b1aad9"}'
+    headers:
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      connection: keep-alive
+      content-type: application/json
+      date: Thu, 30 Jun 2022 20:00:31 GMT
+      expires: '0'
+      pragma: no-cache
+      request-context: appId=cid-v1:5b32f2b4-ce05-44ec-8664-125ad5663561
+      server: istio-envoy
+      strict-transport-security: max-age=31536000 ; includeSubDomains
+      transfer-encoding: chunked
+      x-content-type-options: nosniff
+      x-envoy-upstream-service-time: '1777'
+      x-frame-options: DENY
+      x-xss-protection: 1; mode=block
+    status:
+      code: 201
+      message: Created
+    url: https://fake-instance.oep.ppe.azure-int.net/api/file/v2/files/metadata
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - azsdk-python-oep-file/1.0.0b1 Python/3.10.5 (Windows-10-10.0.22000-SP0)
+      data-partition-id:
+      - dpId
+      frame-of-reference:
+      - afabh
+    method: GET
+    uri: https://fake-instance.oep.ppe.azure-int.net/api/file/v2/files/dpId:dataset--File.Generic:269dc6ed-b9de-4a54-a59d-be56e6b1aad9/metadata
+  response:
+    body:
+      string: '{"id":"dpId:dataset--File.Generic:269dc6ed-b9de-4a54-a59d-be56e6b1aad9","kind":"osdu:wks:dataset--File.Generic:1.0.0","legal":{"legaltags":["dpId-R3FullManifest-Legal-Tag-Test8646767"],"otherRelevantDataCountries":["US"],"status":"compliant"},"data":{"DatasetProperties":{"FileSourceInfo":{"FileSource":"/osdu-user/1656619195836-2022-06-30-19-59-55-836/9202cae7488f4d55b7c0a24a259d3096"}},"Endian":"BIG"},"version":1656619231381258,"acl":{"viewers":["data.default.viewers@dpId.contoso.com"],"owners":["data.default.viewers@dpId.contoso.com"]}}'
+    headers:
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      connection: keep-alive
+      content-type: application/json
+      date: Thu, 30 Jun 2022 20:00:37 GMT
+      expires: '0'
+      pragma: no-cache
+      request-context: appId=cid-v1:5b32f2b4-ce05-44ec-8664-125ad5663561
+      server: istio-envoy
+      strict-transport-security: max-age=31536000 ; includeSubDomains
+      transfer-encoding: chunked
+      x-content-type-options: nosniff
+      x-envoy-upstream-service-time: '161'
+      x-frame-options: DENY
+      x-xss-protection: 1; mode=block
+    status:
+      code: 200
+      message: OK
+    url: https://fake-instance.oep.ppe.azure-int.net/api/file/v2/files/dpId:dataset--File.Generic:269dc6ed-b9de-4a54-a59d-be56e6b1aad9/metadata
+version: 1

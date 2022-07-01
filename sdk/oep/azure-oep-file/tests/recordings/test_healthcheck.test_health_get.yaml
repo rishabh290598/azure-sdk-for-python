@@ -1,0 +1,54 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - text/plain
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - azsdk-python-oep-file/1.0.0b1 Python/3.10.5 (Windows-10-10.0.22000-SP0)
+      data-partition-id:
+      - dpId
+      frame-of-reference:
+      - afabh
+    method: GET
+    uri: https://fake-instance.oep.ppe.azure-int.net/api/file/v2/liveness_check
+  response:
+    body:
+      string: File service is alive
+    headers:
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      connection:
+      - keep-alive
+      content-length:
+      - '21'
+      content-type:
+      - text/plain;charset=UTF-8
+      date:
+      - Fri, 01 Jul 2022 09:26:08 GMT
+      expires:
+      - '0'
+      pragma:
+      - no-cache
+      request-context:
+      - appId=cid-v1:5b32f2b4-ce05-44ec-8664-125ad5663561
+      server:
+      - istio-envoy
+      strict-transport-security:
+      - max-age=31536000 ; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-envoy-upstream-service-time:
+      - '14'
+      x-frame-options:
+      - DENY
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

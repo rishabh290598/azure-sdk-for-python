@@ -1,0 +1,37 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - azsdk-python-oep-file/1.0.0b1 Python/3.10.5 (Windows-10-10.0.22000-SP0)
+      data-partition-id:
+      - dpId
+      frame-of-reference:
+      - fafa
+    method: GET
+    uri: https://fake-instance.oep.ppe.azure-int.net/api/file/v2/files/uploadURL
+  response:
+    body:
+      string: '{"FileID":"dd37956a22544814822bb375a7e8c3d7","Location":{"SignedURL":"https://datarbriylf75zld6.blob.core.windows.net/file-staging-area/osdu-user%2F1656677845295-2022-07-01-12-17-25-295%2Fdd37956a22544814822bb375a7e8c3d7?sv=2020-10-02&st=2022-07-01T12%3A17%3A25Z&se=2022-07-08T12%3A17%3A25Z&skoid=5da111df-bc05-4804-bc9d-cbb09639dd0d&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2022-07-01T12%3A17%3A25Z&ske=2022-07-08T12%3A17%3A25Z&sks=b&skv=2020-10-02&sr=b&sp=cw&sig=tpDBKGRs739ew87YT4E6yjW7aTT3y041BQBh8R7JXig%3D","FileSource":"/osdu-user/1656677845295-2022-07-01-12-17-25-295/dd37956a22544814822bb375a7e8c3d7"}}'
+    headers:
+      cache-control: no-cache, no-store, max-age=0, must-revalidate
+      connection: keep-alive
+      content-type: application/json
+      date: Fri, 01 Jul 2022 12:17:25 GMT
+      expires: '0'
+      pragma: no-cache
+      request-context: appId=cid-v1:5b32f2b4-ce05-44ec-8664-125ad5663561
+      server: istio-envoy
+      strict-transport-security: max-age=31536000 ; includeSubDomains
+      transfer-encoding: chunked
+      x-content-type-options: nosniff
+      x-envoy-upstream-service-time: '564'
+      x-frame-options: DENY
+      x-xss-protection: 1; mode=block
+    status:
+      code: 200
+      message: OK
+    url: https://fake-instance.oep.ppe.azure-int.net/api/file/v2/files/uploadURL
+version: 1
