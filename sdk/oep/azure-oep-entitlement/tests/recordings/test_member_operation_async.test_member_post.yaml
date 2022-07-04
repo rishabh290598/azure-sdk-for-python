@@ -1,0 +1,46 @@
+interactions:
+- request:
+    body: '{"email": "abcde@domain.com", "role": "MEMBER"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Length:
+      - '50'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - azsdk-python-oep-entitlement/1.0.0b1 Python/3.10.5 (Windows-10-10.0.22000-SP0)
+      data-partition-id:
+      - dpId
+    method: POST
+    uri: https://fake-instance.oep.ppe.azure-int.net/api/entitlements/v2/groups/users@dpId.contoso.com/members
+  response:
+    body:
+      string: '{"email":"abcde@domain.com","role":"MEMBER"}'
+    headers:
+      access-control-allow-credentials: 'true'
+      access-control-allow-headers: access-control-allow-origin, origin, content-type,
+        accept, authorization, data-partition-id, correlation-id, appkey
+      access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH
+      access-control-allow-origin: '*'
+      access-control-max-age: '3600'
+      cache-control: no-cache, no-store, must-revalidate
+      connection: keep-alive
+      content-security-policy: default-src 'self'
+      content-type: application/json
+      correlation-id: 2d5e35ef-a637-4d35-9447-df4ba9f03bbe
+      date: Sat, 02 Jul 2022 21:20:57 GMT
+      expires: '0'
+      request-context: appId=cid-v1:dbdfc11a-e20d-4395-a472-e060d9b3bae7
+      server: istio-envoy
+      strict-transport-security: max-age=31536000; includeSubDomains
+      transfer-encoding: chunked
+      x-content-type-options: nosniff
+      x-envoy-upstream-service-time: '167'
+      x-frame-options: DENY
+      x-xss-protection: 1; mode=block
+    status:
+      code: 200
+      message: OK
+    url: https://tnotesta.oep.ppe.azure-int.net/api/entitlements/v2/groups/users@dpId.contoso.com/members
+version: 1

@@ -1,0 +1,276 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "2021-06-01-preview",
+    "title": "Api Documentation",
+    "description": "Api Documentation",
+    "contact": {}
+  },
+  "securityDefinitions": {
+    "Authorization": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/entitlements/v2/groups/{group_email}/members": {
+      "post": {
+        "description": "addMember",
+        "summary": "addMemberUsingPOST",
+        "tags": [
+          "add-member-api"
+        ],
+        "operationId": "Member_PostAddMember",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "data-partition-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "tenant"
+          },
+          {
+            "name": "group_email",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "group_email"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": false,
+            "enum": [
+              "application/json"
+            ],
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddMemberRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/AddMemberResponse"
+            },
+            "headers": {}
+          },
+          "201": {
+            "description": "Created",
+            "headers": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "headers": {}
+          },
+          "403": {
+            "description": "Forbidden",
+            "headers": {}
+          },
+          "404": {
+            "description": "Not Found",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "Authorization": [
+              "global"
+            ]
+          }
+        ],
+        "x-ms-examples": {
+          "addMemberUsingPOST_MaximumSet_Gen": {
+            "$ref": "./examples/addMemberUsingPOST_MaximumSet_Gen.json"
+          },
+          "addMemberUsingPOST_MinimumSet_Gen": {
+            "$ref": "./examples/addMemberUsingPOST_MinimumSet_Gen.json"
+          }
+        }
+      }
+    },
+    "/api/entitlements/v2/_ah/liveness_check": {
+      "get": {
+        "description": "livenessCheck",
+        "summary": "livenessCheckUsingGET",
+        "tags": [
+          "health-checks-api"
+        ],
+        "operationId": "Health_GetLivenessCheck",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "data-partition-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "tenant"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "headers": {}
+          },
+          "403": {
+            "description": "Forbidden",
+            "headers": {}
+          },
+          "404": {
+            "description": "Not Found",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "Authorization": [
+              "global"
+            ]
+          }
+        ],
+        "x-ms-examples": {
+          "livenessCheckUsingGET_MaximumSet_Gen": {
+            "$ref": "./examples/livenessCheckUsingGET_MaximumSet_Gen.json"
+          },
+          "livenessCheckUsingGET_MinimumSet_Gen": {
+            "$ref": "./examples/livenessCheckUsingGET_MinimumSet_Gen.json"
+          }
+        }
+      }
+    },
+    "/api/entitlements/v2/_ah/readiness_check": {
+      "get": {
+        "description": "readinessCheck",
+        "summary": "readinessCheckUsingGET",
+        "tags": [
+          "health-checks-api"
+        ],
+        "operationId": "Health_GetReadinessCheck",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "data-partition-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "tenant"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {}
+          },
+          "401": {
+            "description": "Unauthorized",
+            "headers": {}
+          },
+          "403": {
+            "description": "Forbidden",
+            "headers": {}
+          },
+          "404": {
+            "description": "Not Found",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "Authorization": [
+              "global"
+            ]
+          }
+        ],
+        "x-ms-examples": {
+          "readinessCheckUsingGET_MaximumSet_Gen": {
+            "$ref": "./examples/readinessCheckUsingGET_MaximumSet_Gen.json"
+          },
+          "readinessCheckUsingGET_MinimumSet_Gen": {
+            "$ref": "./examples/readinessCheckUsingGET_MinimumSet_Gen.json"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AddMemberResponse": {
+      "title":"AddMemberResponse",
+      "type": "object",
+      "properties":{
+        "email":{
+          "type":"string"
+        },
+        "role":{
+          "type":"string"
+        }
+      }
+    },
+    "AddMemberRequest": {
+      "title":"AddMemberRequest",
+      "type": "object",
+      "properties":{
+        "email":{
+          "type":"string"
+        },
+        "role":{
+          "$ref": "#/definitions/Role"
+        }
+      }
+    },
+    "Role": {
+      "title": "role",
+      "type": "string",
+      "enum": [
+        "MEMBER",
+        "OWNER"
+      ]
+    }
+  },
+  "security": [],
+  "tags": [
+    {
+      "name": "add-member-api",
+      "description": "Add Member Api"
+    },
+    {
+      "name": "health-checks-api",
+      "description": "Health Checks Api"
+    }
+  ]
+}

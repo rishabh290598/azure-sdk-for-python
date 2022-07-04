@@ -1,0 +1,124 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - azsdk-python-oep-entitlement/1.0.0b1 Python/3.10.5 (Windows-10-10.0.22000-SP0)
+      data-partition-id:
+      - dpId
+    method: GET
+    uri: https://fake-instance.oep.ppe.azure-int.net/api/entitlements/v2/_ah/liveness_check
+  response:
+    body:
+      string: ''
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - access-control-allow-origin, origin, content-type, accept, authorization,
+        data-partition-id, correlation-id, appkey
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH
+      access-control-allow-origin:
+      - '*'
+      access-control-max-age:
+      - '3600'
+      cache-control:
+      - no-cache, no-store, must-revalidate
+      connection:
+      - keep-alive
+      content-length:
+      - '0'
+      content-security-policy:
+      - default-src 'self'
+      correlation-id:
+      - e948a299-9cc4-4d63-bbd4-1235c74df690
+      date:
+      - Sat, 02 Jul 2022 20:53:07 GMT
+      expires:
+      - '0'
+      request-context:
+      - appId=cid-v1:dbdfc11a-e20d-4395-a472-e060d9b3bae7
+      server:
+      - istio-envoy
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-envoy-upstream-service-time:
+      - '12'
+      x-frame-options:
+      - DENY
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - azsdk-python-oep-entitlement/1.0.0b1 Python/3.10.5 (Windows-10-10.0.22000-SP0)
+      data-partition-id:
+      - dpId
+    method: GET
+    uri: https://fake-instance.oep.ppe.azure-int.net/api/entitlements/v2/_ah/readiness_check
+  response:
+    body:
+      string: ''
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - access-control-allow-origin, origin, content-type, accept, authorization,
+        data-partition-id, correlation-id, appkey
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH
+      access-control-allow-origin:
+      - '*'
+      access-control-max-age:
+      - '3600'
+      cache-control:
+      - no-cache, no-store, must-revalidate
+      connection:
+      - keep-alive
+      content-length:
+      - '0'
+      content-security-policy:
+      - default-src 'self'
+      correlation-id:
+      - 56932d5e-ee9f-4491-a66d-c62cfed13c3e
+      date:
+      - Sat, 02 Jul 2022 20:53:38 GMT
+      expires:
+      - '0'
+      request-context:
+      - appId=cid-v1:dbdfc11a-e20d-4395-a472-e060d9b3bae7
+      server:
+      - istio-envoy
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-envoy-upstream-service-time:
+      - '32'
+      x-frame-options:
+      - DENY
+      x-xss-protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1
